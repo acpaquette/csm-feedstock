@@ -2,6 +2,7 @@ build_platform:
   osx_arm64: osx_64
 provider:
   win: azure
+  linux_aarch64: emulated
 conda_forge_output_validation: true
 github:
   branch_name: main
