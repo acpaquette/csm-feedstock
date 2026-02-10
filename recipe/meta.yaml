@@ -30,6 +30,7 @@ test:
     - if not exist %LIBRARY_BIN%\csmapi.dll exit 1  # [win]
     - if not exist %LIBRARY_LIB%\csmapi.lib exit 1  # [win]
     - if not exist %LIBRARY_INC%\csm\Ellipsoid.h exit 1  # [win]
+    - file $PREFIX/lib/libcsmapi.dylib  # [osx]
 
 about:
   home: http://github.com/sminster/csm
