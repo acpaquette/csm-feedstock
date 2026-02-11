@@ -127,6 +127,19 @@ else
 
     validate_recipe_outputs "${FEEDSTOCK_NAME}"
 
+    if [[ "${BUILD_PLATFORM}" == "osx-arm64" ]]; then
+        echo "Verifying ARM64 architecture for .dylib files..."
+        for lib in "$PREFIX"/lib/*.dylib; do
+            echo "Inspecting $lib"
+            file "$lib"
+            if ! file "$lib" | grep -q "arm64"; then
+                echo "ERROR: $lib is not arm64."
+                exit 1
+            fi
+        done
+    fi
+fi
+
     ( endgroup "Validating outputs" ) 2> /dev/null
 
     ( startgroup "Uploading packages" ) 2> /dev/null
