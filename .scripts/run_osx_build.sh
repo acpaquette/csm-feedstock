@@ -138,7 +138,6 @@ else
             fi
         done
     fi
-fi
 
     ( endgroup "Validating outputs" ) 2> /dev/null
 
