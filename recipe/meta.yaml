@@ -24,13 +24,13 @@ requirements:
 test:
   commands:
     - test -e $PREFIX/lib/libcsmapi.so  # [linux]
-    - test -e $PREFIX/lib/libcsmapi.dylib  # [osx]
+    - test -e $PREFIX/lib/libcsmapi.dylib  # [osx or osx_arm64]
     - test -e $PREFIX/include/csm/Isd.h  # [not win]
     - test -e $PREFIX/include/csm/csm.h  # [not win]
     - if not exist %LIBRARY_BIN%\csmapi.dll exit 1  # [win]
     - if not exist %LIBRARY_LIB%\csmapi.lib exit 1  # [win]
     - if not exist %LIBRARY_INC%\csm\Ellipsoid.h exit 1  # [win]
-    - file $PREFIX/lib/libcsmapi.dylib  # [osx]
+    - file $PREFIX/lib/libcsmapi.dylib  # [osx_arm64]
 
 about:
   home: http://github.com/sminster/csm
