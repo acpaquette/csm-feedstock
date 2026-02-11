@@ -127,7 +127,7 @@ else
 
     validate_recipe_outputs "${FEEDSTOCK_NAME}"
 
-    if [[ "${BUILD_PLATFORM}" == "osx-arm64" ]]; then
+    if [[ "${HOST_PLATFORM}" == "osx-arm64" ]]; then
         echo "Verifying ARM64 architecture for .dylib files..."
         for lib in "$PREFIX"/lib/*.dylib; do
             echo "Inspecting $lib"
