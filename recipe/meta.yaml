@@ -18,7 +18,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}  # [linux]
     - {{ stdlib("c") }}
-    - cmake
+    - cmake-no-system >=3.14
     - ninja
 
 test:
