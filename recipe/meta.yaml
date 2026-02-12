@@ -16,10 +16,11 @@ build:
 
 requirements:
   build:
-    - {{ compiler('cxx') }}  # [linux]
-    - {{ stdlib("c") }}
+    - {{ compiler('cxx') }}
     - cmake-no-system >=3.14
     - ninja
+  host:
+    - {{ stdlib("c") }}
 
 test:
   commands:
