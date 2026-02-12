@@ -12,14 +12,16 @@ source:
     - patches/add_cmake.patch   # Adds the CMake build system
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
-    - {{ compiler('cxx') }}  # [linux]
+    - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
     - cmake
     - ninja
+  host:
+    - {{ stdlib("c") }}
 
 test:
   commands:
