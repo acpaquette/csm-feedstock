@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ngageoint/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: dcb2f1bbdfd3b506a9646a5bfcc00026ed161cd1bbb61452498d2537f3b8706e
+  sha256: ec3530716f3e2dd752948f80fd7e3b3808ca31f0bdbe5d62d82da6cb71d5981a
   patches:
     - patches/add_cmake.patch   # Adds the CMake build system
 
