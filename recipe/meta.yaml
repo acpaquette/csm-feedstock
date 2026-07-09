@@ -1,18 +1,18 @@
 {% set name = "csm" %}
-{% set version = "3.0.3.3" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/sminster/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: dcb2f1bbdfd3b506a9646a5bfcc00026ed161cd1bbb61452498d2537f3b8706e
+  url: https://github.com/ngageoint/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: ec3530716f3e2dd752948f80fd7e3b3808ca31f0bdbe5d62d82da6cb71d5981a
   patches:
     - patches/add_cmake.patch   # Adds the CMake build system
 
 build:
-  number: 3
+  number: 0
 
 requirements:
   build:
