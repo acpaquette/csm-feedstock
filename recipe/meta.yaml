@@ -12,7 +12,7 @@ source:
     - patches/add_cmake.patch   # Adds the CMake build system
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:

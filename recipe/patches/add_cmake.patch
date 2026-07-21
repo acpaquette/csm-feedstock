@@ -1,8 +1,8 @@
 --- /dev/null	2019-01-06 12:45:33.000000000 -0700
 +++ CMakeLists.txt	2019-01-06 12:45:38.000000000 -0700
-@@ -0,0 +1,37 @@
+@@ -0,0 +1,38 @@
 +cmake_minimum_required(VERSION 3.10)
-+project(csmapi VERSION 3.0.3 DESCRIPTION "Community Sensor Model API")
++project(csmapi VERSION 3.1.0 DESCRIPTION "Community Sensor Model API")
 +set(CMAKE_CXX_STANDARD 11)
 +
 +add_library(csmapi SHARED
@@ -29,6 +29,7 @@
 +file(GLOB HEADER_FILES ${PROJECT_SOURCE_DIR}/*.h)
 +set_target_properties(csmapi PROPERTIES
 +                    VERSION ${PROJECT_VERSION}
++                    SOVERSION 3
 +                    PUBLIC_HEADER "${HEADER_FILES}"
 +)
 +
